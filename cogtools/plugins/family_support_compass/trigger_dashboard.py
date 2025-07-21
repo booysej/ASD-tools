@@ -1,0 +1,1 @@
+# Trigger Management Dashboard logic and UI stub

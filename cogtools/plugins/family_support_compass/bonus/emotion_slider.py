@@ -1,0 +1,1 @@
+# Emotion Check-in Slider logic and UI stub

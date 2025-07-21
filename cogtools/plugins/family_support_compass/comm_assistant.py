@@ -1,0 +1,1 @@
+# Communication Assistant logic and UI stub

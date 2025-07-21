@@ -1,0 +1,1 @@
+# Daily Partner Sync logic and UI stub

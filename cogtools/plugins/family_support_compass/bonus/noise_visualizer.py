@@ -1,0 +1,1 @@
+# Noise Level Visualizer logic and UI stub
