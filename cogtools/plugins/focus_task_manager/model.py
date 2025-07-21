@@ -1,0 +1,1 @@
+# Placeholder for task data model (YAML/Markdown/JSON based)
