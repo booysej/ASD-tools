@@ -1,0 +1,1 @@
+# Placeholder for visual coding helper data model (YAML/Markdown/JSON based)

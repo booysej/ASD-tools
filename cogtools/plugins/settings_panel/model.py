@@ -1,0 +1,1 @@
+# Placeholder for settings panel data model (YAML/Markdown/JSON based)

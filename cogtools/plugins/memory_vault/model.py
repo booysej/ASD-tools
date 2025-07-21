@@ -1,0 +1,1 @@
+# Placeholder for memory vault data model (YAML/Markdown/JSON based)
