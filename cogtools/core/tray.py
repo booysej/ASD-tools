@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QSystemTrayIcon, QMenu, QAction, QMessageBox
+from PySide6.QtWidgets import QSystemTrayIcon, QMenu, QMessageBox
 from PySide6.QtGui import QIcon, QPainter, QPixmap, QBrush, QPen
 from PySide6.QtCore import Qt
 from .plugin_loader import PluginManager

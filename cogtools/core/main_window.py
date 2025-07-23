@@ -2,7 +2,7 @@ from PySide6.QtWidgets import (QMainWindow, QWidget, QHBoxLayout, QVBoxLayout,
                                QStackedWidget, QListWidget, QListWidgetItem,
                                QPushButton, QLabel, QFrame, QGraphicsOpacityEffect)
 from PySide6.QtCore import Qt, QPropertyAnimation, QEasingCurve, QRect, Signal, QTimer
-from PySide6.QtGui import QIcon, QPainter, QPixmap, QBrush, QPen
+from PySide6.QtGui import QIcon, QPainter, QPixmap, QBrush, QPen, QColor
 from .theme import AppleTheme, AppleColors
 from .plugin_loader import PluginManager
 import os

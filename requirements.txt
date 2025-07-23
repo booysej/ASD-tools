@@ -1,7 +1,8 @@
-PySide6>=6.5
+PySide6>=6.5,<6.6
 ruamel.yaml>=0.17
 markdown>=3.4
 # For plugin discovery
 importlib-metadata; python_version<'3.8'
 # For future plugins (NLP, etc.)
 # numpy, scikit-learn, sentence-transformers, etc. (optional)
+PyYAML
