@@ -331,6 +331,9 @@ class AppleNotification(QFrame):
     
     closed = Signal()
     
+    # Class variable to track notifications
+    _active_notifications = []
+    
     def __init__(self, title, message, notification_type="info", parent=None):
         super().__init__(parent)
         self.notification_type = notification_type
@@ -381,6 +384,7 @@ class AppleNotification(QFrame):
             font-size: 12px;
             color: #666666;
         """)
+        message_label.setWordWrap(True)
         
         text_layout.addWidget(title_label)
         text_layout.addWidget(message_label)
@@ -418,6 +422,8 @@ class AppleNotification(QFrame):
     def close_notification(self):
         """Close with animation"""
         self.closed.emit()
+        if self in AppleNotification._active_notifications:
+            AppleNotification._active_notifications.remove(self)
         self.deleteLater()
     
     def show_with_animation(self):
@@ -425,3 +431,61 @@ class AppleNotification(QFrame):
         # Simple fade in for now
         animation = AppleTheme.create_fade_animation(self)
         animation.start()
+        
+        # Auto-close after 5 seconds
+        QTimer.singleShot(5000, self.close_notification)
+    
+    @staticmethod
+    def show_notification(parent, title, message, notification_type="info"):
+        """Show a notification"""
+        if parent is None:
+            return None
+            
+        notification = AppleNotification(title, message, notification_type, parent)
+        
+        # Position notification
+        parent_rect = parent.rect()
+        notification.resize(400, 80)
+        
+        # Position in top-right corner
+        x = parent_rect.width() - notification.width() - 20
+        y = 20 + len(AppleNotification._active_notifications) * 90
+        
+        notification.move(x, y)
+        notification.show()
+        notification.show_with_animation()
+        
+        AppleNotification._active_notifications.append(notification)
+        notification.closed.connect(lambda: AppleNotification._reposition_notifications())
+        
+        return notification
+    
+    @staticmethod
+    def show_success(parent, title, message=""):
+        """Show success notification"""
+        return AppleNotification.show_notification(parent, title, message, "success")
+    
+    @staticmethod
+    def show_warning(parent, title, message=""):
+        """Show warning notification"""
+        return AppleNotification.show_notification(parent, title, message, "warning")
+    
+    @staticmethod
+    def show_error(parent, title, message=""):
+        """Show error notification"""
+        return AppleNotification.show_notification(parent, title, message, "error")
+    
+    @staticmethod
+    def show_info(parent, title, message=""):
+        """Show info notification"""
+        return AppleNotification.show_notification(parent, title, message, "info")
+    
+    @staticmethod
+    def _reposition_notifications():
+        """Reposition all active notifications"""
+        for i, notification in enumerate(AppleNotification._active_notifications):
+            if notification and notification.parent():
+                parent_rect = notification.parent().rect()
+                x = parent_rect.width() - notification.width() - 20
+                y = 20 + i * 90
+                notification.move(x, y)
