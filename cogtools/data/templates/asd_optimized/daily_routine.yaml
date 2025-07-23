@@ -1,0 +1,221 @@
+# Daily Routine Template - ASD Optimized
+# Customize times and activities to match your needs
+# Add sensory accommodations and transition buffers as needed
+
+morning_routine:
+  start_time: "07:00"
+  tasks:
+    - time: "07:00"
+      task: "Wake up"
+      duration: 5
+      notes: "Use sunrise alarm if light sensitive"
+      
+    - time: "07:05"
+      task: "Morning hygiene"
+      duration: 15
+      checklist:
+        - "Brush teeth (2 minutes)"
+        - "Wash face with lukewarm water"
+        - "Apply unscented moisturizer"
+      sensory_notes: "Use soft towel, avoid harsh lighting"
+      
+    - time: "07:20"
+      task: "Get dressed"
+      duration: 10
+      notes: "Clothes laid out night before, check weather"
+      comfort_items:
+        - "Soft fabrics only"
+        - "No tags or seams"
+        - "Comfortable shoes"
+        
+    - time: "07:30"
+      task: "Breakfast"
+      duration: 20
+      options:
+        - "Option A: Oatmeal with fruit"
+        - "Option B: Toast with peanut butter"
+        - "Option C: Yogurt with granola"
+      notes: "Eat in quiet space, no news/social media"
+      
+    - time: "07:50"
+      task: "Transition buffer"
+      duration: 10
+      activities:
+        - "Review day's schedule"
+        - "Gather needed items"
+        - "Deep breathing exercise"
+
+work_routine:
+  start_time: "08:00"
+  
+  focus_blocks:
+    - block: 1
+      time: "08:00-09:30"
+      type: "Deep work"
+      setup:
+        - "Close unnecessary tabs"
+        - "Set status to 'Do not disturb'"
+        - "Put on noise-canceling headphones"
+      break_after: 10
+      
+    - block: 2
+      time: "09:40-11:00"
+      type: "Meetings/Collaboration"
+      prep:
+        - "Review agenda 5 min before"
+        - "Prepare questions in advance"
+        - "Have water nearby"
+      recovery_after: 15
+      
+    - block: 3
+      time: "11:15-12:30"
+      type: "Administrative tasks"
+      tasks:
+        - "Email processing"
+        - "Documentation"
+        - "Planning"
+        
+  lunch_break:
+    time: "12:30-13:30"
+    activities:
+      - "Eat in calm environment"
+      - "Take walk if weather permits"
+      - "Sensory break (quiet time)"
+    avoid:
+      - "Crowded cafeterias"
+      - "Loud conversations"
+      - "Work discussions"
+
+afternoon_routine:
+  focus_blocks:
+    - block: 4
+      time: "13:30-15:00"
+      type: "Creative/Problem-solving work"
+      environment:
+        - "Natural light if possible"
+        - "Background white noise if helpful"
+        - "Keep water and snacks nearby"
+      break_after: 10
+      
+    - block: 5
+      time: "15:10-16:30"
+      type: "Wrap-up tasks"
+      checklist:
+        - "Update task tracker"
+        - "Send end-of-day communications"
+        - "Prepare tomorrow's priorities"
+        
+    - block: 6
+      time: "16:30-17:00"
+      type: "Transition time"
+      activities:
+        - "Clean workspace"
+        - "Close all work applications"
+        - "Brief meditation or breathing"
+
+evening_routine:
+  start_time: "17:00"
+  
+  activities:
+    - time: "17:00-17:30"
+      task: "Decompress"
+      options:
+        - "Listen to calming music"
+        - "Light exercise/stretching"
+        - "Engage in special interest"
+        
+    - time: "17:30-18:30"
+      task: "Dinner preparation and eating"
+      notes: "Simple meals, batch cooking on weekends"
+      
+    - time: "18:30-19:30"
+      task: "Personal time"
+      suggestions:
+        - "Hobby or special interest"
+        - "Reading"
+        - "Creative projects"
+      avoid: "Over-stimulating activities"
+      
+    - time: "19:30-20:00"
+      task: "Household tasks"
+      approach: "One task per day, not everything at once"
+      
+    - time: "20:00-21:00"
+      task: "Relaxation"
+      options:
+        - "Gentle TV/streaming"
+        - "Journaling"
+        - "Light socializing (if energy permits)"
+
+bedtime_routine:
+  start_time: "21:00"
+  
+  wind_down:
+    - time: "21:00"
+      task: "Begin wind-down"
+      actions:
+        - "Dim lights"
+        - "Turn off screens"
+        - "Set out tomorrow's clothes"
+        
+    - time: "21:15"
+      task: "Evening hygiene"
+      duration: 15
+      
+    - time: "21:30"
+      task: "Prepare bedroom"
+      checklist:
+        - "Cool temperature (18-20°C)"
+        - "Blackout curtains closed"
+        - "White noise on if needed"
+        - "Comfort items in place"
+        
+    - time: "21:45"
+      task: "In bed"
+      activities:
+        - "Reading (paper book)"
+        - "Calm breathing"
+        - "Progressive relaxation"
+        
+    - time: "22:00"
+      task: "Lights out"
+      goal: "Sleep by 22:30"
+
+flexibility_rules:
+  # Rules for when routine is disrupted
+  
+  minor_disruption:
+    # Less than 30 minutes off schedule
+    response: "Continue with next scheduled item"
+    skip: "Non-essential tasks only"
+    
+  major_disruption:
+    # More than 30 minutes off schedule
+    response: "Switch to priority mode"
+    focus_on:
+      - "Must-do tasks only"
+      - "Basic self-care"
+      - "Communication if affecting others"
+      
+  sick_day:
+    priorities:
+      1: "Rest and hydration"
+      2: "Notify work/responsibilities"
+      3: "Basic hygiene and meals"
+      4: "Gentle activities only"
+      
+  high_stress_day:
+    modifications:
+      - "Shorter work blocks (45 min max)"
+      - "Longer breaks (15-20 min)"
+      - "Extra sensory accommodations"
+      - "Lower expectations"
+      - "Earlier bedtime"
+
+customization_notes: |
+  - This is a template - modify ALL times to fit your life
+  - Add/remove activities based on your needs
+  - Include your specific sensory accommodations
+  - Build in more transition time if needed
+  - Remember: Consistency matters more than perfection
+  - Track what works and adjust accordingly
