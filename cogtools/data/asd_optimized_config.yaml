@@ -1,0 +1,229 @@
+# CogTools Configuration - ASD Optimized
+# This configuration is specifically designed for users with ASD Level 1
+# All settings prioritize clarity, predictability, and sensory comfort
+
+# General Settings
+general:
+  # Start with minimal features to avoid overwhelm
+  startup_plugins:
+    - focus_task_manager
+    - memory_vault
+  
+  # Reduce cognitive load
+  auto_save: true
+  auto_save_interval: 300  # Save every 5 minutes
+  confirm_before_exit: true
+  
+  # Predictable behavior
+  remember_window_positions: true
+  start_minimized_to_tray: true
+
+# Visual Settings - Optimized for sensory comfort
+visual:
+  # High contrast for clarity
+  theme: "high_contrast_dark"
+  
+  # Reduce visual noise
+  animations_enabled: false
+  transparency_enabled: false
+  window_shadows: false
+  
+  # Clear, readable text
+  font_family: "Arial"
+  font_size: 14
+  line_spacing: 1.5
+  
+  # Calming colors (customizable)
+  colors:
+    background: "#1a1a1a"
+    text: "#e0e0e0"
+    accent: "#4a9eff"  # Blue is often calming
+    success: "#4caf50"
+    warning: "#ff9800"
+    error: "#f44336"
+
+# Audio Settings - Minimize unexpected sounds
+audio:
+  # All sounds off by default
+  enable_sounds: false
+  
+  # If sounds are needed, use these gentle options
+  notification_sound: "gentle_chime"
+  volume: 30  # Low volume
+  
+  # No sudden sounds
+  error_sounds: false
+  success_sounds: false
+
+# Notification Settings - Prevent interruption overload
+notifications:
+  # Batch notifications to reduce interruptions
+  batch_notifications: true
+  batch_interval: 1800  # Every 30 minutes
+  
+  # Only critical notifications
+  show_task_completed: false
+  show_auto_save: false
+  show_minor_updates: false
+  
+  # Visual only, no popup sounds
+  notification_style: "silent_banner"
+  duration: 5000  # 5 seconds
+  position: "bottom_right"
+
+# Task Manager Settings - Clear structure
+task_manager:
+  # Visual organization
+  default_view: "kanban"
+  columns:
+    - "To Do"
+    - "In Progress"
+    - "Done"
+    - "Waiting"  # For blocked tasks
+  
+  # Clear priorities
+  priority_levels:
+    - name: "Urgent"
+      color: "#ff5252"
+    - name: "Normal"
+      color: "#4a9eff"
+    - name: "Low"
+      color: "#808080"
+  
+  # Time management
+  pomodoro_duration: 25
+  break_duration: 5
+  long_break_duration: 15
+  
+  # Reduce decision fatigue
+  auto_move_completed: true
+  archive_after_days: 7
+
+# Memory Vault Settings - External brain
+memory_vault:
+  # Pre-configured categories
+  default_categories:
+    - name: "Work Procedures"
+      icon: "📋"
+    - name: "Social Scripts"
+      icon: "💬"
+    - name: "Daily Routines"
+      icon: "📅"
+    - name: "Quick Reference"
+      icon: "⚡"
+    - name: "Meeting Notes"
+      icon: "📝"
+  
+  # Search settings
+  search_preview_lines: 3
+  highlight_search_terms: true
+  
+  # Templates for common scenarios
+  enable_templates: true
+  template_folder: "templates/asd_optimized/"
+
+# Executive Function Coach Settings
+coach:
+  # Routine support
+  routine_reminders: true
+  gentle_transitions: true
+  transition_warning_minutes: 5
+  
+  # Planning aids
+  breakdown_suggestions: true
+  time_estimation_help: true
+  
+  # Reward system (optional)
+  enable_rewards: false  # Some find this patronizing
+  
+  # Daily planning
+  morning_planning_prompt: true
+  evening_review_prompt: true
+
+# Keyboard Shortcuts - Reduce mouse use
+shortcuts:
+  # Essential shortcuts only
+  new_task: "Ctrl+T"
+  search_all: "Ctrl+F"
+  quick_note: "Ctrl+N"
+  toggle_timer: "Ctrl+Space"
+  save_all: "Ctrl+S"
+  
+  # Navigation
+  next_plugin: "Ctrl+Tab"
+  previous_plugin: "Ctrl+Shift+Tab"
+  close_window: "Escape"
+
+# Accessibility Settings
+accessibility:
+  # Keyboard navigation
+  full_keyboard_navigation: true
+  show_keyboard_hints: true
+  
+  # Visual aids
+  focus_indicators: "high_contrast"
+  tooltip_delay: 1000  # 1 second
+  
+  # Reduce surprises
+  confirm_destructive_actions: true
+  undo_enabled: true
+  undo_history_size: 50
+
+# Backup Settings - Never lose data
+backup:
+  auto_backup: true
+  backup_interval: "daily"
+  backup_location: "CogTools-Backups/"
+  keep_backups: 30  # One month
+  
+  # Version control friendly
+  use_readable_timestamps: true
+  compress_backups: false
+
+# Privacy Settings
+privacy:
+  # No unexpected network activity
+  check_for_updates: false
+  send_usage_statistics: false
+  
+  # Local only
+  sync_enabled: false
+  cloud_features: false
+
+# Advanced Settings
+advanced:
+  # Performance
+  lazy_loading: true  # Load plugins only when needed
+  cache_size: 100  # MB
+  
+  # Debugging (helpful for understanding issues)
+  verbose_logging: false
+  log_level: "WARNING"
+  
+  # File handling
+  default_file_format: "markdown"  # Human readable
+  auto_detect_file_changes: true
+
+# Plugin-Specific Overrides
+plugin_overrides:
+  visual_coding_helper:
+    # Start with flowcharts
+    default_mode: "flowchart"
+    auto_generate_comments: true
+    explicit_type_hints: true
+  
+  family_support_compass:
+    # Relationship tracking
+    track_interaction_patterns: true
+    suggest_communication_strategies: true
+    private_notes_enabled: true
+
+# Emergency Reset
+# If everything becomes overwhelming, uncomment this line:
+# reset_to_minimal: true
+
+# Notes for ASD Users:
+# 1. Start with default settings and adjust gradually
+# 2. Document what works for you in the memory vault
+# 3. Share successful configurations with other ASD users
+# 4. Remember: The "right" settings are the ones that work for YOU
